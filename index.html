@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mellowdrop | Chill Sips, Happy Protein</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mellowPink: "#ff9edb",
+            mellowOrange: "#ffb36a",
+            mellowBlue: "#7dd3ff",
+            mellowPurple: "#c4b5fd",
+            mellowNavy: "#050816",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .marquee {
+      animation: marquee 30s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="bg-mellowNavy text-white antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- NAVBAR -->
+    <header class="w-full bg-mellowNavy/80 backdrop-blur border-b border-white/10">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-mellowPink via-mellowOrange to-mellowBlue shadow-lg shadow-mellowPink/40"></div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-sm font-semibold tracking-[0.2em] uppercase">Mellowdrop</span>
+            <span class="text-xs text-white/70">Chill sips, happy protein</span>
+          </div>
+        </div>
+
+        <!-- Nav links -->
+        <div class="hidden md:flex items-center gap-7 text-sm text-white/80">
+          <a href="#product" class="hover:text-white transition">Flavors</a>
+          <a href="#benefits" class="hover:text-white transition">Benefits</a>
+          <a href="#science" class="hover:text-white transition">How it works</a>
+          <a href="#faq" class="hover:text-white transition">FAQ</a>
+          <a href="#waitlist"
+             class="inline-flex items-center rounded-full bg-white text-mellowNavy px-4 py-1.5 text-xs font-semibold uppercase tracking-wide shadow hover:bg-mellowPink hover:text-mellowNavy transition">
+            Join waitlist
+          </a>
+        </div>
+
+        <!-- Mobile CTA -->
+        <a href="#waitlist"
+           class="md:hidden inline-flex items-center rounded-full border border-white/50 px-3 py-1 text-xs font-medium uppercase tracking-wide text-white hover:bg-white hover:text-mellowNavy transition">
+          Waitlist
+        </a>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex-1">
+
+      <!-- HERO -->
+      <section class="relative overflow-hidden">
+        <!-- Background blobs -->
+        <div class="pointer-events-none absolute -top-40 -left-32 h-72 w-72 rounded-full bg-mellowPink/30 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-40 -right-20 h-80 w-80 rounded-full bg-mellowBlue/30 blur-3xl"></div>
+
+        <div class="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-14 md:flex-row md:items-center md:py-20">
+          <!-- Left copy -->
+          <div class="flex-1 space-y-6">
+            <p class="text-xs font-semibold tracking-[0.35em] text-mellowPink uppercase">
+              New • Fun-size protein & hydration
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+              Turn your water into
+              <span class="bg-gradient-to-r from-mellowPink via-mellowOrange to-mellowBlue bg-clip-text text-transparent">
+                a little party.
+              </span>
+            </h1>
+            <p class="max-w-xl text-sm sm:text-base text-white/80 leading-relaxed">
+              Mellowdrop is a fruity hydration + light protein stick you drop into your bottle.
+              It fizzes, it sparkles, it actually tastes good—no chalky vibes, no blender, just chill sips that
+              sneak in 8g of complete protein.
+            </p>
+
+            <!-- Pills -->
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 border border-white/20 px-3 py-1">8g light protein</span>
+              <span class="rounded-full bg-white/10 border border-white/20 px-3 py-1">Electrolytes</span>
+              <span class="rounded-full bg-white/10 border border-white/20 px-3 py-1">No added sugar</span>
+              <span class="rounded-full bg-white/10 border border-white/20 px-3 py-1">Fizzy & fun</span>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href="#waitlist"
+                 class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-mellowPink via-mellowOrange to-mellowBlue px-6 py-2.5 text-sm font-semibold text-mellowNavy shadow-lg shadow-mellowPink/40 hover:brightness-110 transition">
+                Get on the list ✨
+              </a>
+              <button
+                type="button"
+                onclick="document.getElementById('product').scrollIntoView({ behavior: 'smooth' })"
+                class="inline-flex items-center justify-center rounded-full border border-white/40 px-5 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 transition">
+                Meet the flavors
+              </button>
+            </div>
+
+            <!-- Micro trust -->
+            <div class="flex flex-wrap items-center gap-3 pt-1 text-[11px] text-white/60">
+              <span>Formulated with dietitians</span>
+              <span class="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block"></span>
+              <span>Made for desk days, gym days, chill days</span>
+            </div>
+          </div>
+
+          <!-- Right visual -->
+          <div class="flex-1">
+            <div class="relative mx-auto max-w-sm">
+              <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-mellowPink/25 via-mellowOrange/20 to-mellowBlue/25 blur-3xl"></div>
+
+              <div class="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-5 shadow-2xl">
+                <div class="flex justify-center gap-4 items-end">
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-5 shadow-2xl">
+                  <img 
+                    src="https://i.imgur.com/3xeDc5F.jpg"
+                    alt="Colorful drinks"
+                    className="w-full h-60 object-cover rounded-2xl"
+                  />
+                <div class="mt-5 text-xs text-white/80 space-y-1">
+                  <p class="font-semibold text-white">Drop • Fizz • Sip • Smile</p>
+                  <p>Built for that “I should drink more water” voice in your head—now with a snackable protein boost.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS STRIP -->
+      <section id="benefits" class="border-y border-white/10 bg-mellowNavy/80">
+        <div class="mx-auto max-w-6xl overflow-hidden px-4 py-4">
+          <div class="relative flex whitespace-nowrap">
+            <div class="marquee flex min-w-max gap-6 text-xs font-medium tracking-wide text-white/80">
+              <span>Juicy flavors, no chalk</span>
+              <span>• Light on the stomach</span>
+              <span>• 0g added sugar</span>
+              <span>• Only 40–50 calories</span>
+              <span>• 8g complete protein</span>
+              <span>• Daily-habit friendly</span>
+              <span>• Vegan-friendly options coming</span>
+              <span>• Fun enough to actually crave</span>
+
+              <span>• Juicy flavors, no chalk</span>
+              <span>• Light on the stomach</span>
+              <span>• 0g added sugar</span>
+              <span>• Only 40–50 calories</span>
+              <span>• 8g complete protein</span>
+              <span>• Daily-habit friendly</span>
+              <span>• Vegan-friendly options coming</span>
+              <span>• Fun enough to actually crave</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT / FLAVORS -->
+      <section id="product" class="bg-mellowNavy">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+          <div class="flex flex-col gap-8 md:flex-row md:items-start">
+            <div class="md:w-1/2 space-y-4">
+              <p class="text-xs font-semibold tracking-[0.35em] text-mellowPink uppercase">
+                Pick your mood
+              </p>
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+                Fizzy sticks for every kind of day.
+              </h2>
+              <p class="text-sm sm:text-base text-white/80">
+                Mellowdrop lives in your tote, gym bag, or backpack. Each stick is a tiny color-bomb you toss
+                into your water—so hitting your protein and hydration goals stops feeling like a chore.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm text-white/85">
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-mellowPink"></span>
+                  <span>No blender, no shaker ball, no cleanup.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-mellowBlue"></span>
+                  <span>Formulated to be gentle on your stomach.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-mellowOrange"></span>
+                  <span>Balanced electrolytes so your water actually does something.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cards -->
+            <div class="md:w-1/2 mt-6 grid gap-5 sm:grid-cols-2 md:mt-0">
+              <!-- Flavor 1 -->
+              <article class="relative rounded-3xl border border-white/15 bg-white/5 p-4 shadow-lg">
+                <div class="mb-2 inline-flex items-center gap-1 rounded-full bg-mellowPink/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-mellowPink">
+                  Sunrise Splash
+                </div>
+                <p class="text-sm font-semibold">Peach • Mango • Sparkle</p>
+                <p class="mt-2 text-xs text-white/80">
+                  Bright, juicy, wake-up energy without caffeine. Think “spa water meets brunch mocktail.”
+                </p>
+                <ul class="mt-3 text-[11px] text-white/75 space-y-1.5">
+                  <li>• 8g light whey protein</li>
+                  <li>• Sodium + potassium for hydration</li>
+                  <li>• Vitamin C for a little glow</li>
+                </ul>
+                <p class="mt-3 text-[11px] text-white/60">Perfect for slow mornings & soft-girl walks.</p>
+              </article>
+
+              <!-- Flavor 2 -->
+              <article class="relative rounded-3xl border border-white/15 bg-white/5 p-4 shadow-lg">
+                <div class="mb-2 inline-flex items-center gap-1 rounded-full bg-mellowBlue/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-mellowBlue">
+                  Night Swim
+                </div>
+                <p class="text-sm font-semibold">Blueberry • Lychee • Chill</p>
+                <p class="mt-2 text-xs text-white/80">
+                  End-of-day unwind with cozy, not-too-sweet vibes. Feels like a playlist and a soft blanket.
+                </p>
+                <ul class="mt-3 text-[11px] text-white/75 space-y-1.5">
+                  <li>• 8g light protein for overnight repair</li>
+                  <li>• Magnesium & electrolytes</li>
+                  <li>• L-theanine for soft focus and calm</li>
+                </ul>
+                <p class="mt-3 text-[11px] text-white/60">Best with sunset, slippers, and zero plans.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mellowNavy">
+              <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl transition duration-500 hover:scale-[1.02] hover:border-mellowPink/30">
+                    <img
+                      src="https://i.imgur.com/JK1NulJ.jpg"
+                      alt="Friends enjoying Mellowdrop during the day"
+                      class="h-64 w-full object-cover rounded-2xl md:h-80"
+                    />
+                  </div>
+                  <div class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl transition duration-500 hover:scale-[1.02] hover:border-mellowBlue/30">
+                    <img
+                      src="https://i.imgur.com/KuDOfS4.jpg"
+                      alt="Family relaxing with Mellowdrop at night"
+                      class="h-64 w-full object-cover rounded-2xl md:h-80"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SCIENCE -->
+      <section id="science" class="border-y border-white/10 bg-mellowNavy/90">
+        <div class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+          <div class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start">
+            <div>
+              <p class="text-xs font-semibold tracking-[0.35em] text-mellowPink uppercase">
+                Cute, but also science
+              </p>
+              <h3 class="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight">
+                Built so your body actually uses it.
+              </h3>
+              <p class="mt-3 text-sm sm:text-base text-white/80">
+                Mellowdrop leans on highly bioavailable whey fractions, a complete amino acid profile, and
+                dialed-in electrolytes—so the fun colors come with real-world benefits.
+              </p>
+              <div class="mt-5 grid gap-4 sm:grid-cols-3 sm:gap-6">
+                <div class="space-y-1">
+                  <div class="text-sm font-semibold">Complete protein</div>
+                  <p class="text-xs text-white/70">
+                    All essential amino acids with a focus on leucine for muscle protein synthesis.
+                  </p>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-sm font-semibold">Gut-friendly</div>
+                  <p class="text-xs text-white/70">
+                    No gums, no artificial dyes, no “mystery blends” that wreck your afternoon.
+                  </p>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-sm font-semibold">GLP-1 conscious</div>
+                  <p class="text-xs text-white/70">
+                    Light, sippable protein that plays nicely alongside modern metabolic support plans.*
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ritual card -->
+            <div class="rounded-3xl border border-white/15 bg-white/5 p-5 shadow-xl">
+              <p class="text-xs font-semibold uppercase tracking-wide text-white/80">
+                3-step mellow ritual
+              </p>
+              <ol class="mt-4 space-y-3 text-sm text-white/90">
+                <li>
+                  <span class="font-semibold text-mellowPink">01. Fill</span><br />
+                  Grab your favorite bottle or cup and add cold water.
+                </li>
+                <li>
+                  <span class="font-semibold text-mellowBlue">02. Drop</span><br />
+                  Tear open a stick, drop it in, and watch it fizz.
+                </li>
+                <li>
+                  <span class="font-semibold text-mellowOrange">03. Sip</span><br />
+                  Give it a swirl, take a sip, pretend you’re on vacation.
+                </li>
+              </ol>
+              <p class="mt-4 text-[11px] text-white/60">
+                *Always chat with your healthcare provider before changing your routine, especially if you’re
+                using GLP-1 or similar medications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mellowNavy">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl transition duration-500 hover:scale-[1.02]">
+              <img
+                src="https://i.imgur.com/PYJcc4Q.jpg"
+                alt="Image 1"
+                class="h-56 w-full object-cover rounded-2xl"
+              />
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl transition duration-500 hover:scale-[1.02]">
+              <img
+                src="https://i.imgur.com/B91W2rp.jpg"
+                alt="Image 2"
+                class="h-56 w-full object-cover rounded-2xl"
+              />
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl transition duration-500 hover:scale-[1.02]">
+              <img
+                src="https://i.imgur.com/Fqk2hsA.jpg"
+                alt="Image 3"
+                class="h-56 w-full object-cover rounded-2xl"
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <!-- WAITLIST -->
+      <section id="waitlist" class="bg-mellowNavy">
+        <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div class="mx-auto max-w-2xl rounded-3xl border border-white/25 bg-gradient-to-br from-mellowPink/25 via-mellowNavy to-mellowBlue/25 p-6 sm:p-8 shadow-[0_0_40px_rgba(251,113,133,0.4)]">
+            <p class="text-xs font-semibold tracking-[0.35em] text-white uppercase">
+              First sips club
+            </p>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight">
+              Get early access to Mellowdrop.
+            </h3>
+            <p class="mt-3 text-sm sm:text-base text-white/85">
+              Join the waitlist for launch details, early-bird pricing, and a chance to try limited-run flavors.
+              No spam, just cute emails and good drinks.
+            </p>
+
+            <form class="mt-5 flex flex-col gap-3 sm:flex-row">
+              <input
+                type="email"
+                required
+                placeholder="your@email.com"
+                class="w-full rounded-full border border-white/40 bg-mellowNavy/80 px-4 py-2.5 text-sm text-white placeholder:text-white/60 outline-none focus:border-mellowPink focus:ring-1 focus:ring-mellowPink"
+              />
+              <button
+                type="submit"
+                class="w-full sm:w-auto rounded-full bg-white text-mellowNavy px-6 py-2.5 text-sm font-semibold shadow-lg shadow-mellowPink/40 hover:bg-mellowPink hover:text-mellowNavy transition">
+                Join waitlist ✉️
+              </button>
+            </form>
+
+            <p class="mt-2 text-[11px] text-white/70">
+              You can unsubscribe anytime. We’ll still wish you well-hydrated days. 💧
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="border-t border-white/10 bg-mellowNavy/95">
+        <div class="mx-auto max-w-6xl px-4 py-12">
+          <div class="grid gap-8 md:grid-cols-[1fr,1.2fr]">
+            <div>
+              <h4 class="text-lg font-semibold tracking-tight">You ask, we sip & answer.</h4>
+              <p class="mt-2 text-sm text-white/80">
+                Swap in your real product details later—this is just a vibe-check starting point.
+              </p>
+            </div>
+            <div class="space-y-4 text-sm text-white/90">
+              <details class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-3">
+                <summary class="flex cursor-pointer items-center justify-between gap-2 text-sm font-medium">
+                  Is Mellowdrop a drink, a snack, or a supplement?
+                  <span class="text-xs text-white/60 group-open:hidden">+</span>
+                  <span class="hidden text-xs text-white/60 group-open:inline">–</span>
+                </summary>
+                <p class="mt-2 text-xs text-white/80">
+                  Honestly, a little bit of all three. It’s a light protein + hydration boost you sip like a fun
+                  drink but count toward your daily protein habits.
+                </p>
+              </details>
+
+              <details class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-3">
+                <summary class="flex cursor-pointer items-center justify-between gap-2 text-sm font-medium">
+                  Does it actually mix in cold water?
+                  <span class="text-xs text-white/60 group-open:hidden">+</span>
+                  <span class="hidden text-xs text-white/60 group-open:inline">–</span>
+                </summary>
+                <p class="mt-2 text-xs text-white/80">
+                  Yes—Mellowdrop is built to dissolve in cold water with a quick swirl or shake. No blender, no
+                  sludge at the bottom.
+                </p>
+              </details>
+
+              <details class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-3">
+                <summary class="flex cursor-pointer items-center justify-between gap-2 text-sm font-medium">
+                  Can I drink it every day?
+                  <span class="text-xs text-white/60 group-open:hidden">+</span>
+                  <span class="hidden text-xs text-white/60 group-open:inline">–</span>
+                </summary>
+                <p class="mt-2 text-xs text-white/80">
+                  That’s the idea! Mellowdrop is designed as a daily habit—an easy way to stack protein and
+                  hydration without overthinking it. If you have specific health conditions, check with your
+                  doctor first.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-mellowNavy">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 text-[11px] text-white/60 sm:flex-row">
+        <p>© <span id="year"></span> Mellowdrop Co. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <a href="#" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
